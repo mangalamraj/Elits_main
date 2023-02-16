@@ -1,0 +1,88 @@
+.background{
+    background-color: var(--main-color);
+    
+  .section1{
+    color:white;
+    height: 100vh;
+    text-align: center;
+    h1{
+        padding-top:200px;
+    }
+  }
+  .section2{
+    color:white;
+    height:150vh;
+    h1{
+        font-size: 3rem;
+        text-align: center;
+        padding-top:100px;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 0.3rem;
+        word-spacing: 0.5rem;
+        text-transform: uppercase;
+    }
+  }
+  .section3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 100px;
+    .des-section{
+        background: url("/images/des.jpg")   center;
+        background-size: cover;
+        margin-top:150px;
+        height: 320px;
+        width:320px;
+        background-color: gray;
+        border-radius: 50%;
+        align-items: center;
+        text-align: center;
+        opacity:0.9;
+        h2{
+            
+            margin-top: 140px;
+            font-size: 2.5rem;
+            letter-spacing: 0.05rem;
+            font-family: 'Ubuntu', sans-serif;
+        }
+    }
+    .cod-section{
+        
+        background: url("/images/cod.jpg")   center;
+        background-size: cover;
+        height: 350px;
+        width:350px;
+        background-color: gray;
+        border-radius: 50%;
+        align-items: center;
+        text-align: center;
+        opacity:0.9;
+        h2{
+            margin-top: 150px;
+            font-size: 2.8rem;
+            letter-spacing: 0.05rem;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        
+    }
+    .dev-section{
+        background: url("/images/dev.jpg")   center;
+        background-size: cover;
+        margin-top:150px;
+        height: 320px;
+        width:320px;
+        background-color: gray;
+        border-radius: 50%;
+        align-items: center;
+        text-align: center;
+        opacity:0.9;
+        h2{
+            margin-top: 140px;
+            font-size: 2.5rem;
+            letter-spacing: 0.05rem;
+            font-family: 'Ubuntu', sans-serif;
+        }
+    }
+    
+  }
+}
