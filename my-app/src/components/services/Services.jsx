@@ -1,11 +1,29 @@
-import React from 'react'
-import './services.scss'
-
-
-
+import React, { useEffect, useRef } from 'react';
+import './services.scss';
 
 const Services = () => {
+  const ref = useRef();
 
+  useEffect(() => {
+    const currentRef = ref.current;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          currentRef.classList.add('fade-in');
+          currentRef.querySelectorAll('.slide-in').forEach((el) => {
+            el.classList.add('slide-in-active');
+          });
+          observer.unobserve(currentRef);
+        }
+      });
+    });
+
+    observer.observe(currentRef);
+
+    return () => {
+      observer.unobserve(currentRef);
+    };
+  }, []);
 
   return (
     <div className="background">
@@ -15,8 +33,8 @@ const Services = () => {
       <div className="section2">
         <h1>Our Services</h1>
   
-        <div className="section3">
-          <div className="section3a">
+        <div className="section3 scroll-snap" ref={ref}>
+          <div className="section3a slide-in">
             <div className="des1-section">
             </div>
             <div className="des2-section">
@@ -25,7 +43,7 @@ const Services = () => {
             </div>
           </div>
           
-          <div className="section3b">
+          <div className="section3b slide-in">
             <div className="cod1-section">
             </div>
             <div className="cod2-section">
@@ -33,7 +51,7 @@ const Services = () => {
               <p>Mern stack developement.</p>
             </div>
           </div>
-          <div className="section3c">
+          <div className="section3c slide-in">
             <div className="dev1-section">
             </div>
             <div className="dev2-section">
@@ -45,7 +63,8 @@ const Services = () => {
       
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;
+

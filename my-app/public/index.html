@@ -10,6 +10,21 @@
         margin: 0;
         
       }
+      html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  scroll-snap-type: y mandatory;
+  scroll-padding: 1rem;
+}
+
+/* Add this class to any element that you want to snap to during scrolling */
+.scroll-snap {
+  scroll-snap-align: start;
+}
       </style>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Ubuntu&display=swap" rel="stylesheet">
 
